@@ -9,15 +9,15 @@ function App() {
   return (
     <div>
       {/* Hero Background */}
-      <div className="w-full h-[100vh] z-[-1] absolute opacity-30">
+      <div className="w-full h-[100vdh] z-[-1] absolute opacity-30">
         <img
           src={heroBgImg}
-          className="w-full h-[100vh] z-[-1] absolute object-none"
+          className="w-full h-[100vdh] z-[-1] absolute object-none"
           alt=""
         />
       </div>
 
-      <div className="h-[100vh]">
+      <div className="h-[100vdh]">
         <nav className="w-full flex justify-center py-6 bg-sky-800 text-white">
           <button className="underline decoration-2 text-xl lg:text-2xl mr-4 lg:mr-12">
             Home
@@ -34,7 +34,7 @@ function App() {
         </nav>
 
         {/* Hero */}
-        <div className="h-[100vh] mt-[-4.25rem] lg:mt-[-4.5rem] px-[10vw] flex items-center">
+        <div className="h-[100vdh] mt-[-4.25rem] lg:mt-[-4.5rem] px-[10vw] flex items-center">
           <div className="w-full flex flex-col text-center">
             <h1 className="mb-4 text-5xl lg:text-6xl font-bold text-sky-700">
               The Scene Art Gallery
@@ -57,13 +57,13 @@ function App() {
             </p>
             <div className="mb-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-1">
-                <IfYouAreSubContainer iconUri="src\assets\icons\event-svgrepo-com.svg">
+                <IfYouAreSubContainer iconUri="icons\event-svgrepo-com.svg">
                   have an enjoyable time
                 </IfYouAreSubContainer>
-                <IfYouAreSubContainer iconUri="src\assets\icons\people-svgrepo-com.svg">
+                <IfYouAreSubContainer iconUri="icons\people-svgrepo-com.svg">
                   host an event
                 </IfYouAreSubContainer>
-                <IfYouAreSubContainer iconUri="src\assets\icons\simple-signature-contract-svgrepo-com.svg">
+                <IfYouAreSubContainer iconUri="icons\simple-signature-contract-svgrepo-com.svg">
                   consign your art
                 </IfYouAreSubContainer>
                 <IfYouAreSubContainer iconUri="src\assets\icons\canvas-svgrepo-com(1).svg">
