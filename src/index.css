@@ -5,3 +5,11 @@
 body {
   font-family: "Archivo", sans-serif;
 }
+
+nav > details > summary {
+  list-style: none;
+}
+
+nav > details > summary::-webkit-details-marker {
+  display: none;
+}

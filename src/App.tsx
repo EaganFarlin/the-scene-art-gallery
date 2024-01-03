@@ -18,23 +18,48 @@ function App() {
       </div>
 
       <div className="h-[100svh]">
-        <nav className="w-full flex justify-center py-6 bg-sky-800 text-white">
-          <button className="underline decoration-2 text-xl lg:text-2xl mr-4 lg:mr-12">
-            Home
-          </button>
-          <details className="mr-4 lg:mr-12">
-            <summary className="text-xl lg:text-2xl hover:cursor-pointer">
-              Our Artists
-            </summary>
-          </details>
-          <button className="text-xl lg:text-2xl mr-4 lg:mr-12">
-            Contact Us
-          </button>
-          <button className="text-xl lg:text-2xl">Subscribe</button>
+        {/* Navbar */}
+        <nav className="bg-sky-800 text-white">
+          {window.innerWidth > 1024 ? (
+            <div className="w-full flex justify-center py-6 px-16">
+              <button className="underline decoration-2 text-2xl mr-12">
+                Home
+              </button>
+              <details className="mr-12">
+                <summary className="text-2xl hover:cursor-pointer">
+                  Our Artists
+                </summary>
+              </details>
+              <button className="text-2xl mr-12">Contact Us</button>
+              <button className="text-2xl">Subscribe</button>
+            </div>
+          ) : (
+            <details className="w-full flex flex-col justify-end py-3 px-4">
+              <summary className="flex justify-end">
+                <img
+                  src="public\icons\interface-ui-menu-list-hamburger-svgrepo-com.svg"
+                  className="w-14 h-14"
+                  alt="hamburger_menu"
+                />
+              </summary>
+              <div className="flex flex-col">
+                <button className="mt-2 underline decoration-2 text-2xl text-right">
+                  Home
+                </button>
+                <details>
+                  <summary className="mt-2 text-2xl hover:cursor-pointer text-right">
+                    Our Artists
+                  </summary>
+                </details>
+                <button className="mt-2 text-2xl text-right">Contact Us</button>
+                <button className="mt-2 text-2xl text-right">Subscribe</button>
+              </div>
+            </details>
+          )}
         </nav>
 
         {/* Hero */}
-        <div className="h-[100svh] mt-[-4.25rem] lg:mt-[-4.5rem] px-[10vw] flex items-center">
+        <div className="h-[100svh] mt-[-5rem] lg:mt-[-4.5rem] px-[10vw] flex items-center">
           <div className="w-full flex flex-col text-center">
             <h1 className="mb-4 text-5xl lg:text-6xl font-bold text-sky-700">
               The Scene Art Gallery
