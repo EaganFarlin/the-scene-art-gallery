@@ -9,15 +9,15 @@ function App() {
   return (
     <div>
       {/* Hero Background */}
-      <div className="w-full h-[100dvh] z-[-1] absolute opacity-30">
+      <div className="w-full h-[100svh] z-[-1] absolute opacity-30">
         <img
           src={heroBgImg}
-          className="w-full h-[100dvh] z-[-1] absolute object-none"
+          className="w-full h-[100svh] z-[-1] absolute object-none"
           alt=""
         />
       </div>
 
-      <div className="h-[100dvh]">
+      <div className="h-[100svh]">
         <nav className="w-full flex justify-center py-6 bg-sky-800 text-white">
           <button className="underline decoration-2 text-xl lg:text-2xl mr-4 lg:mr-12">
             Home
@@ -34,7 +34,7 @@ function App() {
         </nav>
 
         {/* Hero */}
-        <div className="h-[100dvh] mt-[-4.25rem] lg:mt-[-4.5rem] px-[10vw] flex items-center">
+        <div className="h-[100svh] mt-[-4.25rem] lg:mt-[-4.5rem] px-[10vw] flex items-center">
           <div className="w-full flex flex-col text-center">
             <h1 className="mb-4 text-5xl lg:text-6xl font-bold text-sky-700">
               The Scene Art Gallery
