@@ -66,7 +66,7 @@ function App() {
                 <IfYouAreSubContainer iconUri="icons\simple-signature-contract-svgrepo-com.svg">
                   consign your art
                 </IfYouAreSubContainer>
-                <IfYouAreSubContainer iconUri="src\assets\icons\canvas-svgrepo-com(1).svg">
+                <IfYouAreSubContainer iconUri="icons\canvas-svgrepo-com(1).svg">
                   display on our <i>Black Spotlight Wall</i>
                 </IfYouAreSubContainer>
               </div>
