@@ -37,7 +37,7 @@ function App() {
             <details className="w-full flex flex-col justify-end py-3 px-4">
               <summary className="flex justify-end">
                 <img
-                  src="public\icons\interface-ui-menu-list-hamburger-svgrepo-com.svg"
+                  src="icons\interface-ui-menu-list-hamburger-svgrepo-com.svg"
                   className="w-14 h-14"
                   alt="hamburger_menu"
                 />
