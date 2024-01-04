@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 // import galleryLogo from "/the_scene_art_gallery.png";
 import heroBgImg from "/src/assets/IMG_1585-3598879456.jpeg";
 import IfYouAreSubContainer from "./components/IfYouAreSubContainer";
@@ -6,6 +6,18 @@ import EventSummary from "./components/EventSummary";
 import "./App.css";
 
 function App() {
+  const [screenIsSmall, setScreenIsSmall] = useState(window.innerWidth < 1024);
+
+  window.addEventListener(
+    "resize",
+    () => {
+      setTimeout(() => {
+        setScreenIsSmall(window.innerWidth < 1024);
+        console.log("RESIZED");
+      }, 200);
+    },
+    true
+  );
   return (
     <div>
       {/* Hero Background */}
@@ -20,20 +32,8 @@ function App() {
       <div className="h-[100svh]">
         {/* Navbar */}
         <nav className="bg-sky-800 text-white">
-          {window.innerWidth > 1024 ? (
-            <div className="w-full flex justify-center py-6 px-16">
-              <button className="underline decoration-2 text-2xl mr-12">
-                Home
-              </button>
-              <details className="mr-12">
-                <summary className="text-2xl hover:cursor-pointer">
-                  Our Artists
-                </summary>
-              </details>
-              <button className="text-2xl mr-12">Contact Us</button>
-              <button className="text-2xl">Subscribe</button>
-            </div>
-          ) : (
+          {screenIsSmall ? (
+            // Mobile
             <details className="w-full flex flex-col justify-end py-3 px-[10vw]">
               <summary className="flex justify-end">
                 <img
@@ -55,6 +55,20 @@ function App() {
                 <button className="mt-2 text-2xl text-right">Subscribe</button>
               </div>
             </details>
+          ) : (
+            // Desktop
+            <div className="w-full flex justify-center py-6 px-16">
+              <button className="underline decoration-2 text-2xl mr-12">
+                Home
+              </button>
+              <details className="mr-12">
+                <summary className="text-2xl hover:cursor-pointer">
+                  Our Artists
+                </summary>
+              </details>
+              <button className="text-2xl mr-12">Contact Us</button>
+              <button className="text-2xl">Subscribe</button>
+            </div>
           )}
         </nav>
 
@@ -71,7 +85,7 @@ function App() {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="w-[75vw] min-w-[20rem] lg:w-1/2">
+        <div className="w-[75vw] min-w-[20rem] max-w-[60rem] lg:w-1/2">
           {/* Who We Are For */}
           <div className="mt-20">
             <h3 className="mb-8 text-3xl lg:text-4xl">
@@ -148,7 +162,7 @@ function App() {
         </div>
       </div>
       <footer className="w-full mt-20 mb-8 flex justify-center text-center">
-        <div className="w-[75vw] min-w-[20rem] lg:w-1/2">
+        <div className="w-[75vw] min-w-[20rem] max-w-[60rem] lg:w-1/2">
           <div className="mb-4 text-2xl text-sky-700">
             <button className="mr-6">
               <p>Phone</p>
