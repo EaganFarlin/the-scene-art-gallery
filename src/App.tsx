@@ -54,16 +54,16 @@ function App() {
                 />
               </summary>
               <div className="flex flex-col">
-                <button className="mt-1 underline decoration-2 text-2xl text-right">
+                <button className="mb-1 underline decoration-2 text-2xl text-right">
                   Home
                 </button>
                 <details>
-                  <summary className="mt-1 text-2xl hover:cursor-pointer text-right">
+                  <summary className="mb-1 text-2xl hover:cursor-pointer text-right">
                     Our Artists
                   </summary>
                 </details>
-                <button className="mt-1 text-2xl text-right">Contact Us</button>
-                <button className="mt-1 text-2xl text-right">Subscribe</button>
+                <button className="mb-1 text-2xl text-right">Contact Us</button>
+                <button className="mb-1 text-2xl text-right">Subscribe</button>
               </div>
             </details>
           ) : (
