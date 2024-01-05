@@ -11,16 +11,20 @@ function App() {
   const emailInputLabel = useRef(null);
   const [emailInputLabelWidth, setEmailInputLabelWidth] = useState(0);
 
-  useEffect(() => {
-    setEmailInputLabelWidth(emailInputLabel.current.clientWidth);
-  });
+  function setEmailInLabWidthFunc() {
+    useEffect(() => {
+      setEmailInputLabelWidth(emailInputLabel.current.clientWidth);
+    });
+    console.log("email in label width:", emailInputLabelWidth);
+  }
+  setEmailInLabWidthFunc();
 
   window.addEventListener(
     "resize",
     () => {
       setTimeout(() => {
         setScreenIsSmall(window.innerWidth < 1024);
-        console.log("RESIZED");
+        setEmailInLabWidthFunc();
       }, 200);
     },
     true
@@ -147,21 +151,23 @@ function App() {
           <div>
             <h2 className="mb-8 text-3xl lg:text-4xl">Subscribe</h2>
             <form className="text-xl lg:text-2xl">
-              <div ref={emailInputLabel}>
-                <label htmlFor="emailInput">
-                  <p className="mb-2">
-                    Enter you email to stay up to date with local art!
-                  </p>
-                </label>
-              </div>
+              <label ref={emailInputLabel} htmlFor="emailInput">
+                <p className="mb-2">
+                  Enter you email to stay up to date with local art!
+                </p>
+              </label>
               <input
                 id="emailInput"
                 type="email"
                 autoComplete="true"
                 className={clsx(
-                  "w-full lg:w-[500px] mb-2 p-1 border-2 border-gray-600 rounded-sm text-xl",
-                  `lg:-${emailInputLabelWidth}`
+                  "mb-2 p-1 border-2 border-gray-600 rounded-sm text-xl"
                 )}
+                style={
+                  screenIsSmall
+                    ? { width: "100%", maxWidth: emailInputLabelWidth }
+                    : { width: emailInputLabelWidth }
+                }
               />
               <br />
               <input
