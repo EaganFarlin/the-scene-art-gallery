@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // import galleryLogo from "/the_scene_art_gallery.png";
 import heroBgImg from "/src/assets/IMG_1585-3598879456.jpeg";
 import IfYouAreSubContainer from "./components/IfYouAreSubContainer";
 import EventSummary from "./components/EventSummary";
 import "./App.css";
+import clsx from "clsx";
 
 function App() {
   const [screenIsSmall, setScreenIsSmall] = useState(window.innerWidth < 1024);
+  const emailInputLabel = useRef(null);
+  const [emailInputLabelWidth, setEmailInputLabelWidth] = useState(0);
+
+  useEffect(() => {
+    setEmailInputLabelWidth(emailInputLabel.current.clientWidth);
+  });
 
   window.addEventListener(
     "resize",
@@ -140,16 +147,21 @@ function App() {
           <div>
             <h2 className="mb-8 text-3xl lg:text-4xl">Subscribe</h2>
             <form className="text-xl lg:text-2xl">
-              <label htmlFor="emailInput">
-                <p className="mb-2">
-                  Enter you email to stay up to date with local art!
-                </p>
-              </label>
+              <div ref={emailInputLabel}>
+                <label htmlFor="emailInput">
+                  <p className="mb-2">
+                    Enter you email to stay up to date with local art!
+                  </p>
+                </label>
+              </div>
               <input
                 id="emailInput"
                 type="email"
                 autoComplete="true"
-                className="w-full lg:w-[50%] lg:min-w-[30rem] lg:max-w-[60rem] mb-2 p-1 border-2 border-gray-600 rounded-sm text-xl"
+                className={clsx(
+                  "w-full lg:w-[500px] mb-2 p-1 border-2 border-gray-600 rounded-sm text-xl",
+                  `lg:-${emailInputLabelWidth}`
+                )}
               />
               <br />
               <input
