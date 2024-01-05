@@ -31,8 +31,8 @@ function App() {
     <div>
       {/* Hero Background */}
       <div>
-        <div className="w-full h-[100svh] z-[-1] absolute opacity-60 bg-black"></div>
-        <div className="w-full h-[100svh] z-[-2] absolute">
+        <div className="w-full h-[100svh] z-[-1] absolute opacity-75 bg-black"></div>
+        <div className="w-full h-[100svh] z-[-2] absolute opacity-75">
           <img
             src={heroBgImg}
             className="w-full h-[100svh] z-[-1] absolute object-none"
