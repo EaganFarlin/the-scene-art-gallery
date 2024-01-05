@@ -164,11 +164,7 @@ function App() {
                 className={clsx(
                   "mb-2 p-1 border-2 border-gray-600 rounded-sm text-xl"
                 )}
-                style={
-                  screenIsSmall
-                    ? { width: "100%", maxWidth: emailInputLabelWidth }
-                    : { width: emailInputLabelWidth }
-                }
+                style={{ width: "100%", maxWidth: emailInputLabelWidth }}
               />
               <br />
               <input
