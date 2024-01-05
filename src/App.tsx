@@ -32,12 +32,15 @@ function App() {
   return (
     <div>
       {/* Hero Background */}
-      <div className="w-full h-[100svh] z-[-1] absolute opacity-30">
-        <img
-          src={heroBgImg}
-          className="w-full h-[100svh] z-[-1] absolute object-none"
-          alt=""
-        />
+      <div>
+        <div className="w-full h-[100svh] z-[-1] absolute opacity-80 bg-black"></div>
+        <div className="w-full h-[100svh] z-[-2] absolute">
+          <img
+            src={heroBgImg}
+            className="w-full h-[100svh] z-[-1] absolute object-none"
+            alt=""
+          />
+        </div>
       </div>
 
       <div className="h-[100svh]">
@@ -89,7 +92,7 @@ function App() {
             <h1 className="mb-4 text-5xl lg:text-6xl font-bold text-sky-700">
               The Scene Art Gallery
             </h1>
-            <h2 className="text-2xl lg:text-3xl">
+            <h2 className="text-2xl lg:text-3xl text-white">
               <i>Premier</i> Art Gallery for Georgia Artists
             </h2>
           </div>
