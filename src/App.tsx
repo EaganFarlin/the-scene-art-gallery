@@ -31,7 +31,7 @@ function App() {
     <div>
       {/* Hero Background */}
       <div>
-        <div className="w-full h-[100svh] z-[-1] absolute opacity-70 bg-black"></div>
+        <div className="w-full h-[100svh] z-[-1] absolute opacity-60 bg-black"></div>
         <div className="w-full h-[100svh] z-[-2] absolute">
           <img
             src={heroBgImg}
@@ -43,7 +43,7 @@ function App() {
 
       <div className="h-[100svh]">
         {/* Navbar */}
-        <nav className="bg-sky-800 text-white">
+        <nav className="bg-sky-600 text-white">
           {screenIsSmall ? (
             // Mobile
             <details className="w-full flex flex-col justify-end py-2 px-[10vw]">
@@ -87,7 +87,7 @@ function App() {
         {/* Hero */}
         <div className="h-[100svh] mt-[-5rem] lg:mt-[-4.5rem] px-[10vw] flex items-center">
           <div className="w-full flex flex-col text-center">
-            <h1 className="mb-4 text-5xl lg:text-6xl font-bold text-sky-700">
+            <h1 className="mb-4 text-5xl lg:text-6xl font-bold text-sky-600">
               The Scene Art Gallery
             </h1>
             <h2 className="text-2xl lg:text-3xl text-white">
@@ -174,7 +174,7 @@ function App() {
               <input
                 type="submit"
                 value="Subscribe"
-                className="p-2 border-2 bg-sky-700 text-lg font-bold text-white rounded-md cursor-pointer"
+                className="p-2 border-2 bg-sky-600 text-lg font-bold text-white rounded-md cursor-pointer"
               />
             </form>
           </div>
@@ -182,7 +182,7 @@ function App() {
       </div>
       <footer className="w-full mt-20 mb-8 flex justify-center text-center">
         <div className="w-[75vw] min-w-[20rem] max-w-[60rem] lg:w-1/2">
-          <div className="mb-4 text-2xl text-sky-700">
+          <div className="mb-4 text-2xl text-sky-600">
             <button className="mr-6">
               <p>Phone</p>
             </button>
