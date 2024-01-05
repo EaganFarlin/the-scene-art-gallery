@@ -15,7 +15,7 @@ function App() {
     const emailInputLabelEl: any = emailInputLabel.current;
     setEmailInputLabelWidth(emailInputLabelEl?.clientWidth);
   }
-  document.addEventListener("DOMContentLoaded", setEmailInLabWidthFunc);
+  document.addEventListener("load", setEmailInLabWidthFunc);
 
   window.addEventListener(
     "resize",
