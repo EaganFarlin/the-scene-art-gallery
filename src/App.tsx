@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 // import galleryLogo from "/the_scene_art_gallery.png";
 import heroBgImg from "/src/assets/IMG_1585-3598879456.jpeg";
 import IfYouAreSubContainer from "./components/IfYouAreSubContainer";
@@ -12,12 +12,10 @@ function App() {
   const [emailInputLabelWidth, setEmailInputLabelWidth] = useState(0);
 
   function setEmailInLabWidthFunc() {
-    useEffect(() => {
-      setEmailInputLabelWidth(emailInputLabel.current.clientWidth);
-    });
-    console.log("email in label width:", emailInputLabelWidth);
+    const emailInputLabelEl: any = emailInputLabel.current;
+    setEmailInputLabelWidth(emailInputLabelEl?.clientWidth);
   }
-  setEmailInLabWidthFunc();
+  document.addEventListener("DOMContentLoaded", setEmailInLabWidthFunc);
 
   window.addEventListener(
     "resize",
