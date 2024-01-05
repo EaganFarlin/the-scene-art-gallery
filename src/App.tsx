@@ -34,7 +34,7 @@ function App() {
         <nav className="bg-sky-800 text-white">
           {screenIsSmall ? (
             // Mobile
-            <details className="w-full flex flex-col justify-end py-3 px-[10vw]">
+            <details className="w-full flex flex-col justify-end py-2 px-[10vw]">
               <summary className="flex justify-end">
                 <img
                   src="icons/interface-ui-menu-list-hamburger-svgrepo-com.svg"
