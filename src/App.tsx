@@ -38,7 +38,7 @@ function App() {
               <summary className="flex justify-end">
                 <img
                   src="icons/interface-ui-menu-list-hamburger-svgrepo-com.svg"
-                  className="w-10 h-10"
+                  className="w-12 h-12"
                   alt="hamburger_menu"
                 />
               </summary>
